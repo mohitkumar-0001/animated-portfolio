@@ -2,6 +2,11 @@
 
 A modern, responsive personal portfolio website built to showcase my skills, projects, education, certifications, resume, and professional profiles.
 
+## 🌐 Live Portfolio
+
+[Visit My Portfolio](https://animated-portfolio-two-pi.vercel.app/)
+
+
 ## 🌐 About
 
 I'm Mohit Kumar, a BCA (Artificial Intelligence & Machine Learning) student focused on Java, software development, AI/ML, and building practical projects.
