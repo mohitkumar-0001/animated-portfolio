@@ -1,0 +1,615 @@
+/* =========================================================
+   GLOBAL THEME
+   FUTURISTIC MINT + CYAN + BLUE + PURPLE
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --bg-primary: #c8f4ea;
+    --bg-secondary: #d7f7f2;
+    --bg-tertiary: #e2f5ff;
+
+    --text-primary: #172033;
+    --text-secondary: #425873;
+    --text-muted: #64809a;
+
+    --accent-blue: #087fd1;
+    --accent-cyan: #06c6e6;
+    --accent-purple: #7338ed;
+    --accent-pink: #e52b83;
+
+    --card-bg: rgba(255, 255, 255, 0.72);
+    --card-border: rgba(255, 255, 255, 0.58);
+
+    --container-width: 1180px;
+    --nav-height: 76px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text-primary);
+
+    overflow-x: hidden;
+
+    position: relative;
+
+    /*
+       MAIN MINT BACKGROUND
+    */
+    background:
+        linear-gradient(
+            115deg,
+            #bfeee6 0%,
+            #c9f3e9 25%,
+            #c8f5ec 48%,
+            #ccefe9 68%,
+            #dcefff 100%
+        );
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND GLOW SYSTEM
+========================================================= */
+
+/*
+   TOP LEFT BLUE BALLOON
+*/
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 650px;
+    height: 650px;
+
+    left: -350px;
+    top: -330px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(55, 125, 255, 0.72) 0%,
+            rgba(64, 156, 255, 0.48) 25%,
+            rgba(56, 189, 248, 0.25) 48%,
+            rgba(56, 189, 248, 0.08) 63%,
+            transparent 76%
+        );
+
+    filter: blur(22px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation: topBlueBalloon 11s ease-in-out infinite;
+}
+
+
+/*
+   BOTTOM RIGHT PURPLE BALLOON
+*/
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 720px;
+    height: 720px;
+
+    right: -390px;
+    bottom: -390px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.68) 0%,
+            rgba(139, 92, 246, 0.46) 24%,
+            rgba(168, 85, 247, 0.30) 42%,
+            rgba(219, 39, 119, 0.13) 58%,
+            transparent 76%
+        );
+
+    filter: blur(28px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation: purpleBalloon 12s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   EXTRA CENTER CYAN GLOW
+========================================================= */
+
+#root::before {
+    content: "";
+
+    position: fixed;
+
+    width: 700px;
+    height: 700px;
+
+    left: 38%;
+    top: 8%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6, 214, 220, 0.19) 0%,
+            rgba(34, 211, 238, 0.11) 35%,
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   EXTRA PURPLE GLOW BEHIND HERO
+========================================================= */
+
+#root::after {
+    content: "";
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    right: 3%;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.18) 0%,
+            rgba(139, 92, 246, 0.10) 38%,
+            transparent 72%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   SUBTLE GRID
+========================================================= */
+
+#root {
+    background-image:
+        linear-gradient(
+            rgba(37, 99, 235, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(37, 99, 235, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    width: 100%;
+    position: relative;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+    background: rgba(124, 58, 237, 0.22);
+    color: #172033;
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+    background:
+        linear-gradient(
+            90deg,
+            #0787d1 0%,
+            #315fe8 32%,
+            #7138eb 67%,
+            #df287e 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* =========================================================
+   GLASS
+========================================================= */
+
+.glass {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.64
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.68
+        );
+
+    box-shadow:
+        0 18px 45px
+        rgba(
+            15,
+            23,
+            42,
+            0.08
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fd1 0%,
+            #315fe8 45%,
+            #7338ed 100%
+        );
+
+    font-size: 0.92rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 13px 30px
+        rgba(
+            37,
+            99,
+            235,
+            0.27
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(
+            124,
+            58,
+            237,
+            0.30
+        );
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border:
+        1px solid
+        rgba(
+            71,
+            85,
+            105,
+            0.14
+        );
+
+    border-radius: 13px;
+
+    color: #172033;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        );
+
+    font-size: 0.92rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 23px
+        rgba(
+            15,
+            23,
+            42,
+            0.07
+        );
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.secondary-btn:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(
+            124,
+            58,
+            237,
+            0.28
+        );
+
+    box-shadow:
+        0 15px 32px
+        rgba(
+            124,
+            58,
+            237,
+            0.12
+        );
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c9eee8;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            180deg,
+            #06b6d4,
+            #7338ed
+        );
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        linear-gradient(
+            180deg,
+            #087fd1,
+            #df287e
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND ANIMATIONS
+========================================================= */
+
+@keyframes topBlueBalloon {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(45px, 30px)
+            scale(1.08);
+    }
+}
+
+
+@keyframes purpleBalloon {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-40px, -35px)
+            scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --nav-height: 70px;
+    }
+
+    #root {
+        background-size: 38px 38px;
+    }
+
+    body::before {
+        width: 450px;
+        height: 450px;
+
+        left: -280px;
+        top: -250px;
+    }
+
+    body::after {
+        width: 500px;
+        height: 500px;
+
+        right: -300px;
+        bottom: -280px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
