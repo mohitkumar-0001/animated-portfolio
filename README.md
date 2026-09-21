@@ -52,9 +52,35 @@ This portfolio is designed to present my technical journey, projects, skills, an
 - VS Code
 - npm
 
-## 🚀 Run Locally
+## 📁 Project Structure
 
-Clone the repository:
-
-```bash
-git clone https://github.com/mohitkumar-0001/animated-portfolio.git
+```text
+animated-portfolio/
+├── public/
+│   ├── mohit.png
+│   └── resume.pdf
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── About/
+│   │   ├── Contact/
+│   │   ├── Education/
+│   │   ├── Footer/
+│   │   ├── Home/
+│   │   ├── Nav/
+│   │   ├── Projects/
+│   │   └── Resume/
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
